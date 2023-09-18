@@ -46,7 +46,7 @@ function controlC() {
     }
   }
   showContainers();
-  interval = setInterval(showContainers, 4000);
+  interval = setInterval(showContainers, 7000);
 }
 
 function delAll(){
