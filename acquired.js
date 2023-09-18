@@ -1,5 +1,6 @@
 import { initializeApp } from 'https://www.gstatic.com/firebasejs/10.3.1/firebase-app.js'
 import { getDatabase, ref, onValue } from "https://www.gstatic.com/firebasejs/10.3.1/firebase-database.js";
+// AppInventor Version
 
 const firebaseConfig = {
     apiKey: "Your-Firebase-Config",
@@ -62,14 +63,18 @@ function loadAll(itemNum){
     }
 }
 
+function removeDQuotes(inputString) {
+  return inputString.replace(/"/g, '');
+}
+
 function loadData(dbval){
     const dbRef = ref(db, 'acquire/'+dbval);
     onValue(dbRef, (snapshot)=>{
         const data = snapshot.val();
         if(data.done == '0'){
         var container = $('<div class="container">');
-        container.append('<img id="image_'+dbval+'" src="'+data.url+'">');
-        container.append('<div class="text"><h2 id="title_'+dbval+'">'+data.name+'</h2><p id="date_'+dbval+'">'+data.date+'</p><p id="special_'+dbval+'">'+data.special+'</p></div>');
+        container.append('<img id="image_'+dbval+'" src="'+removeDQuotes(data.url)+'">');
+        container.append('<div class="text"><h2 id="title_'+dbval+'">'+removeDQuotes(data.name)+'</h2><p id="date_'+dbval+'">'+removeDQuotes(data.date)+'</p><p id="special_'+dbval+'">'+removeDQuotes(data.special)+'</p></div>');
         $('.parent-container').append(container);
         }
     })
