@@ -1,0 +1,78 @@
+@keyframes top-fade-riseup {
+	from {
+		opacity: 0;
+		transform: translate(0%, -10%);
+	}
+	to {
+		opacity: 1;
+		transform: translate(0%, 0%);
+	}
+}
+
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    margin: auto;
+    margin-top: 100px;
+    padding: 50px;
+    max-width: 300px;
+    background-color: rgba(255, 255, 255, 0.3);
+    border-radius: 10px;
+
+    animation: top-fade-riseup 1s forwards;
+}
+
+.parent-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.top-container {
+    padding: 20px;
+    padding-left: 50px;
+    background-color: rgba(0, 0, 0, 0.3);
+}
+
+.text {
+    margin-top: 20px;
+    color: #000;
+}
+
+h3 {
+    color: #fff;
+    font-size: 25px;
+}
+
+p {
+    font-size: 20px;
+}
+
+@font-face {
+    font-family: 'SpoqaHanSansNeo-Thin';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2108@1.1/SpoqaHanSansNeo-Thin.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+ }
+
+body {
+	font-family: "SpoqaHanSansNeo-Thin";
+	margin: 0;
+	padding: 0;
+	background: linear-gradient(rgba(0, 100, 255, 0.5), rgba(0, 100, 255, 0.5))
+}
+
+h1 {
+    font-size: 36px;
+    margin-bottom: 20px;
+    color: #fff;
+    animation: fade 1s forwards, riseup 1s forwards;
+}
+
+img {
+    max-width: 250px;
+    height: auto;
+}
