@@ -2,6 +2,7 @@
 ![dependencies](https://img.shields.io/badge/javascript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black)![dependencies2](https://img.shields.io/badge/jquery-0769AD?style=for-the-badge&logo=jquery&logoColor=white)
 ![last commit](https://img.shields.io/github/last-commit/NellLucas/NJ-LostNFound/main?color=red&style=for-the-badge) ![license](https://img.shields.io/github/license/NellLucas/NJ-LostNFound?style=for-the-badge)
 > ✨ Web 기반 분실물 찾기 프로그램입니다.
+> 230909: 앱인벤터 프로젝트 업로드(최적화 포기, 개발중)
 
 ## Features / 지원하는 기능들
 - 분실물 등록 목록
