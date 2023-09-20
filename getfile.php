@@ -52,15 +52,6 @@ if (isset($_GET['download']) && $_GET['download'] === 'true') {
 
     $filepath = __DIR__ . '/photos/' . $filename;
 
-    // Check if the file already exists
-    if (file_exists($filepath)) {
-        if (unlink($filepath)) {
-            echo "Existing file deleted.";
-        } else {
-            respondWithErrorMessage(400, "Failed to delete existing file.");
-        }
-    }
-
     $data = file_get_contents('php://input');
 
     if ($data === false) {
