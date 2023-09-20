@@ -49,6 +49,12 @@ if (isset($_GET['download']) && $_GET['download'] === 'true') {
     if (strpos($filename, '/') !== false || strpos($filename, '\\') !== false) {
         respondWithErrorMessage(400, "Invalid filename.");
     }
+    
+    // Check if the file extension is .jpeg or .jpg
+    $file_extension = pathinfo($filename, PATHINFO_EXTENSION);
+    if (strtolower($file_extension) !== 'jpeg' && strtolower($file_extension) !== 'jpg') {
+        respondWithErrorMessage(400, "Only .jpeg and .jpg files are allowed.");
+    }
 
     $filepath = __DIR__ . '/photos/' . $filename;
 
@@ -68,3 +74,4 @@ if (isset($_GET['download']) && $_GET['download'] === 'true') {
         respondWithErrorMessage(400, "File transfer failed.");
     }
 }
+?>
