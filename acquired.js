@@ -41,7 +41,9 @@ function controlC() {
       container.style.display = "none";
     });
 
-    for (let i = 0; i < 3; i++) {
+    const numToShow = Math.min(3, containers.length - currentIndex);
+
+    for (let i = 0; i < numToShow; i++) {
       containers[currentIndex].style.display = "block";
       currentIndex = (currentIndex + 1) % containers.length;
     }
