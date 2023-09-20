@@ -16,9 +16,9 @@
     align-items: center;
     text-align: center;
     margin: auto;
-    margin-top: 100px;
+    margin-top: 30px;
     padding: 50px;
-    max-width: 300px;
+    max-width: 350px;
     background-color: rgba(255, 255, 255, 0.3);
     border-radius: 10px;
 
@@ -82,6 +82,6 @@ h1 {
 }
 
 img {
-    max-width: 250px;
+    max-width: 350px;
     height: auto;
 }
