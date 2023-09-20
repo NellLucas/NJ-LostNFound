@@ -49,7 +49,7 @@ if (isset($_GET['download']) && $_GET['download'] === 'true') {
     if (strpos($filename, '/') !== false || strpos($filename, '\\') !== false) {
         respondWithErrorMessage(400, "Invalid filename.");
     }
-    
+
     // Check if the file extension is .jpeg or .jpg
     $file_extension = pathinfo($filename, PATHINFO_EXTENSION);
     if (strtolower($file_extension) !== 'jpeg' && strtolower($file_extension) !== 'jpg') {
