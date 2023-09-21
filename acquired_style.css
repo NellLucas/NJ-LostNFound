@@ -41,6 +41,15 @@
     background-color: rgba(0, 0, 0, 0.3);
 }
 
+.developer-info {
+    position: fixed;
+    bottom: 10px;
+    right: 10px;
+    color: black;
+    font-size: 18px;
+    font-weight: bold;
+}
+
 .text {
     margin-top: 20px;
     color: #000;
