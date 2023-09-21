@@ -16,6 +16,7 @@ const firebaseConfig = {
 const app = initializeApp(firebaseConfig);
 const db = getDatabase(app);
 
+const serverip = "YOUR-SERVER-IP-OR-DOMAIN";
 let interval;
 let itemNum;
 
@@ -75,7 +76,7 @@ function loadData(dbval){
         const data = snapshot.val();
         if(data.done == '0'){
         var container = $('<div class="container">');
-        container.append('<img id="image_'+dbval+'" src="'+removeDQuotes(data.url)+'">');
+        container.append('<img id="image_'+dbval+'" src="'+serverip+removeDQuotes(data.url)+'">');
         container.append('<div class="text"><h2 id="title_'+dbval+'">'+removeDQuotes(data.name)+'</h2><p id="date_'+dbval+'">'+removeDQuotes(data.date)+'</p><p id="special_'+dbval+'">'+removeDQuotes(data.special)+'</p></div>');
         $('.parent-container').append(container);
         }
