@@ -9,6 +9,9 @@
 	}
 }
 
+@import url(//spoqa.github.io/spoqa-han-sans/css/SpoqaHanSansNeo.css);
+* { font-family: 'Spoqa Han Sans Neo', 'sans-serif'; }
+
 
 .container {
     display: flex;
@@ -18,7 +21,7 @@
     margin: auto;
     margin-top: 30px;
     padding: 50px;
-    max-width: 350px;
+    max-width: 450px;
     background-color: rgba(255, 255, 255, 0.3);
     border-radius: 10px;
 
@@ -34,16 +37,8 @@
 .top-container {
     padding: 20px;
     padding-left: 50px;
+	color:#FFF;
     background-color: rgba(0, 0, 0, 0.3);
-}
-
-.developer-info {
-    position: fixed;
-    bottom: 10px;
-    right: 10px;
-    color: black;
-    font-size: 18px;
-    font-weight: bold;
 }
 
 .text {
@@ -51,21 +46,18 @@
     color: #000;
 }
 
-h3 {
-    color: #fff;
-    font-size: 25px;
-}
-
 p {
-    font-size: 20px;
+    font-size: 30px;
 }
 
-@font-face {
-    font-family: 'SpoqaHanSansNeo-Thin';
-    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2108@1.1/SpoqaHanSansNeo-Thin.woff') format('woff');
-    font-weight: normal;
-    font-style: normal;
- }
+h2 {
+	font-size: 40px;
+}
+
+h3 {
+	color: #FFF;
+	font-size: 35px;
+}
 
 body {
 	font-family: "SpoqaHanSansNeo-Thin";
@@ -75,13 +67,13 @@ body {
 }
 
 h1 {
-    font-size: 36px;
+    font-size: 60px;
     margin-bottom: 20px;
     color: #fff;
     animation: fade 1s forwards, riseup 1s forwards;
 }
 
 img {
-    max-width: 350px;
+    max-width: 450px;
     height: auto;
 }
